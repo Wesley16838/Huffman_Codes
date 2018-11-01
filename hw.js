@@ -90,8 +90,9 @@ function huffman() {
 }
 
 // Print out each path from node to leafs
+let arr4=[];
 function printPaths(root, way) {
-    
+   
     if (root == null)
         return;
 
@@ -101,6 +102,7 @@ function printPaths(root, way) {
         str += '1';
 
     if (root.left == null && root.right == null) {
+        arr4.push(str);
         console.log('  '+root.symbol + ',        ' + str);
         str = str.slice(0, -1);
     }
@@ -109,9 +111,14 @@ function printPaths(root, way) {
         printPaths(root.right, 'right');
         str = str.slice(0, -1);
     }
+   
 }
-
-
 
 huffman();
 printPaths(forest_root, '0');
+let totalbit=0;
+for(l=0;l<arr4.length;l++){
+    totalbit=totalbit+(arr4[l].length*arr[l][1]);
+}
+console.log('Total Bits:'+totalbit);
+// console.log(arr4);
