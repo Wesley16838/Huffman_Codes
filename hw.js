@@ -34,7 +34,7 @@ for(j=0;j<arr1.length;j++){
 console.log('Symbol'+' '+'Frequency');
 for(k=0;k<arr1.length;k++){
     let num=new Number((arr[k][1]/total)*100);
-    console.log('  '+arr[k][0]+',        '+num.toFixed()+'%');
+    console.log('  '+arr[k][0]+',        '+num+'%');
 }
 console.log('Symbol'+' '+'Huffman Codes');
 
